@@ -1,0 +1,71 @@
+.chat-container {
+  height: 300px;
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding: 10px;
+  border: 5px solid green;
+}
+
+.message {
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  max-width: 30%;
+}
+
+.sender {
+  background-color: #007bff; /* Blue color for sender messages */
+  color: white;
+  align-self: flex-end; /* Align sender messages to the right */
+}
+
+.receiver {
+  background-color: #f0f0f0; /* Light gray color for receiver messages */
+  color: #333;
+  align-self: flex-start; /* Align receiver messages to the left */
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+input[type="text"] {
+  flex: 0.5;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #007bff; /* Change border color to blue */
+  background-color: #f8f9fa; /* Light gray background color */
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker shade of blue on hover */
+}
+
+.spinner {
+  border: 4px solid #f3f3f3; /* Light gray border */
+  border-top: 4px solid #3498db; /* Blue border on top for loader animation */
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite; /* Animation for loader rotation */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
